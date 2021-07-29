@@ -1,5 +1,9 @@
-function App() {
-  return <div className="App">Hello</div>;
-}
+import SideBar from "./components/SideBar/SideBar";
 
-export default App;
+export default function App() {
+  return (
+    <div className="App">
+      <SideBar />
+    </div>
+  );
+}
