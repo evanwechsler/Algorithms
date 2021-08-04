@@ -1,0 +1,33 @@
+@import "../../styles/globalVars.scss";
+.cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1em;
+    background-color: $bgColor;
+    border-radius: 1em;
+    height: 100%;
+}
+
+.column-container {
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.col {
+    background-color: $accentColor;
+    &.checking {
+        background-color: $primaryColor;
+    }
+    &.swapping {
+        background-color: $secondaryColor;
+    }
+    &.done {
+        background-color: $success;
+    }
+}
+
+.container {
+    width: 100%;
+}

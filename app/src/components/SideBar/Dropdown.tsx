@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { animated, useSpring } from "react-spring";
-import { useMeasure } from "react-use";
+import useMeasure from "react-use-measure";
 import { BiPlus } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ export default function Dropdown({
 }: Props): ReactElement {
   const [isOpen, setOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
-  const [ref, { height }] = useMeasure<HTMLDivElement>();
+  const [ref, { height }] = useMeasure();
   const expand = useSpring({
     height: isOpen ? `${contentHeight}px` : "0px",
     opacity: isOpen ? 1 : 0,

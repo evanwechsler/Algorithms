@@ -9,15 +9,18 @@ export default function Routes(): ReactElement {
     <BrowserRouter>
       <div className="container main">
         <SideBar />
-        <Switch>
-          {mainRoutes.map(({ path, exact, component: Component }) => (
-            <Route
-              path={path}
-              exact={exact}
-              render={(props) => <Component {...props} />}
-            />
-          ))}
-        </Switch>
+        <div className="content">
+          <Switch>
+            {mainRoutes.map(({ path, exact, component: Component }, index) => (
+              <Route
+                path={path}
+                exact={exact}
+                render={(props) => <Component {...props} />}
+                key={index}
+              />
+            ))}
+          </Switch>
+        </div>
       </div>
     </BrowserRouter>
   );

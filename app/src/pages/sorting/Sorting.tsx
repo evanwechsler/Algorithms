@@ -10,13 +10,15 @@ export default function Sorting(): ReactElement {
         <Route exact path={path}>
           <h1>Sorting</h1>
         </Route>
-        {sortingRoutes.map(
-          ({ path: nestedPath, exact, component: Component }) => (
-            <Route path={`${path}${nestedPath}`}>
-              <Component />
-            </Route>
-          )
-        )}
+        <div className="container">
+          {sortingRoutes.map(
+            ({ path: nestedPath, exact, component: Component }, index) => (
+              <Route path={`${path}${nestedPath}`} key={index}>
+                <Component />
+              </Route>
+            )
+          )}
+        </div>
       </Switch>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import Graphs from "src/pages/graphs/Graphs";
 import Home from "src/pages/Home";
+import PageNotFound from "src/pages/PageNotFound";
 import PathFinding from "src/pages/pathFinding/PathFinding";
 import BubbleSort from "src/pages/sorting/BubbleSort";
 import InsertionSort from "src/pages/sorting/InsertionSort";
@@ -8,7 +9,7 @@ import MergeSort from "src/pages/sorting/MergeSort";
 import QuickSort from "src/pages/sorting/QuickSort";
 import Sorting from "src/pages/sorting/Sorting";
 interface Route {
-  path: string;
+  path?: string;
   component: React.ElementType;
   exact?: boolean;
 }
@@ -29,6 +30,7 @@ export const mainRoutes: Route[] = [
   { path: "/sorting", component: Sorting },
   { path: "/path-finding", component: PathFinding },
   { path: "/graphs", component: Graphs },
+  { component: PageNotFound },
 ];
 
 export const sortingRoutes: Route[] = [

@@ -1,3 +1,7 @@
-.container.main {
-    display: flex;
+@import "../../styles/globalVars.scss";
+.container.main {}
+
+.content {
+    margin-left: $sideBarWidth;
+    padding: 2em;
 }
